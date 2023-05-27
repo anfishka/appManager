@@ -9,8 +9,6 @@ struct APP {
 	void (*functionPointer)();
 };
 
-void battleMain();
-
 void displayMenu(APP apps[], int size)
 {
 	cout << "\nМеню: \n\n";
@@ -27,7 +25,7 @@ void menuApps()
 	setlocale(LC_ALL, "");
 	const int appNums = 10;
 	APP apps[appNums] = {
-		{"МОРСКОЙ БОЙ", "Игровое приложение, игра морской бой", battleMain},
+		{"МОРСКОЙ БОЙ", "Игровое приложение, игра морской бой", *battleship},
 		{"ПЯТНАШКИ", "Игровое приложение, игра пятнашки"},
 		{"СПИСОК ДЕЛ", "СРМ, управление списком дел"},
 		{"ПАМЯТЬ", "Игровое приложение, игра память"},
@@ -46,14 +44,17 @@ void menuApps()
 		cin >> choice;
 		if (choice >= 1 && choice <= appNums)
 		{
-			cout << "\nВы выбрали: \x1b[32m" << apps[choice - 1].name << ": " << apps[choice - 1].description << "\033[m\n" << *battleMain;
+			cout << "\nВы выбрали: \x1b[32m" << apps[choice - 1].name << ": " << apps[choice - 1].description << "\033[m\n" ;
+			apps[choice - 1].functionPointer();
 		}
 		else if (choice != 0)
 		{
 			cout << "\n\x1b[31mНеверный ввод номера приложения! Попробуйте снова: \033[m\n";
+
 		}
 
 	} while (choice != 0);
+
 
 	cout << "\nВыход из программы\n";
 }

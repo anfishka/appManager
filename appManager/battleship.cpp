@@ -77,7 +77,7 @@ bool isHitShip(vector<Ship>& ships, int x, int y)
 	return false;
 }
 
-void battleMain()
+void battleship()
 {
 	vector<Ship> playerShips;
 	vector<Ship> computerShips;

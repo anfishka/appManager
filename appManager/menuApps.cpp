@@ -13,8 +13,10 @@ void displayMenu(APP apps[], int size)
 	cout << "\nМеню: \n\n";
 
 	for (int i = 0; i < 10; i++)
+
 	{
 		cout << "\x1b[31m" << i + 1 << ". " << apps[i].name << "\033[m\n";
+
 	}
 	cout << "\n0.Выход\n";
 }
@@ -23,6 +25,7 @@ void menuApps()
 {
 	setlocale(LC_ALL, "");
 	const int appNums = 10;
+
 	APP apps[appNums] = {
 		{"МОРСКОЙ БОЙ", "Игровое приложение, игра морской бой"},
 		{"ПЯТНАШКИ", "Игровое приложение, игра пятнашки"},

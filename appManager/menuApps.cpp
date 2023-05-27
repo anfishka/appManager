@@ -1,12 +1,15 @@
 #include <iostream>
 #include <vector>
-
+#include "battleship.h"
 using namespace std;
 
 struct APP {
 	string name;
 	string description;
+	void (*functionPointer)();
 };
+
+void battleMain();
 
 void displayMenu(APP apps[], int size)
 {
@@ -24,7 +27,7 @@ void menuApps()
 	setlocale(LC_ALL, "");
 	const int appNums = 10;
 	APP apps[appNums] = {
-		{"МОРСКОЙ БОЙ", "Игровое приложение, игра морской бой"},
+		{"МОРСКОЙ БОЙ", "Игровое приложение, игра морской бой", battleMain},
 		{"ПЯТНАШКИ", "Игровое приложение, игра пятнашки"},
 		{"СПИСОК ДЕЛ", "СРМ, управление списком дел"},
 		{"ПАМЯТЬ", "Игровое приложение, игра память"},
@@ -43,7 +46,7 @@ void menuApps()
 		cin >> choice;
 		if (choice >= 1 && choice <= appNums)
 		{
-			cout << "\nВы выбрали: \x1b[32m" << apps[choice - 1].name << ": " << apps[choice - 1].description << "\033[m\n";
+			cout << "\nВы выбрали: \x1b[32m" << apps[choice - 1].name << ": " << apps[choice - 1].description << "\033[m\n" << *battleMain;
 		}
 		else if (choice != 0)
 		{

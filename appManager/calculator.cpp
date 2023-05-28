@@ -37,10 +37,18 @@ double applyOperation(double a, double b, char op) {
     }
 }
 
+stack<double> operandStack;
+stack<Operator> operatorStack;
 
 double calculateExpression(const string& expression) {
+    if (expression.empty()) {
+        return 0;
+    }
+
     stack<double> operandStack;
     stack<Operator> operatorStack;
+
+    int i = 0;
 
     for (char c : expression) {
         if (c == ' ')
@@ -69,6 +77,9 @@ double calculateExpression(const string& expression) {
                 operandStack.pop();
                 operandStack.push(applyOperation(a, b, op));
                 operatorStack.pop();
+            }
+            if (operatorStack.empty()) {
+                return 0;
             }
             operatorStack.pop();
         }
@@ -101,16 +112,19 @@ double calculateExpression(const string& expression) {
         operatorStack.pop();
     }
 
+    if (operandStack.empty()) {
+        return 0;
+    }
+
     return operandStack.top();
 }
 
 void calculator() {
     string expression;
     cout << "Введите арифметическое выражение: ";
+    cin.ignore();
     getline(cin, expression);
 
     double result = calculateExpression(expression);
     cout << "Результат: " << result << endl;
-
-   
 }

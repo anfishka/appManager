@@ -1,0 +1,8 @@
+Apartment: 1A, Floor: 1, Floor: 
+
+Apartment: 1A, Floor: 
+
+Apartment: 2B, Floor: 2, Floor: 
+
+Apartment: 2B, Floor: 
+

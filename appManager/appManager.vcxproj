@@ -131,6 +131,7 @@
     <ClCompile Include="calculator.cpp" />
     <ClCompile Include="fifteen.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="management.cpp" />
     <ClCompile Include="memory.cpp" />
     <ClCompile Include="menuApps.cpp" />
     <ClCompile Include="todo.cpp" />
@@ -139,6 +140,7 @@
     <ClInclude Include="battleship.h" />
     <ClInclude Include="calculator.h" />
     <ClInclude Include="fifteen.h" />
+    <ClInclude Include="management.h" />
     <ClInclude Include="memory.h" />
     <ClInclude Include="menuApps.h" />
     <ClInclude Include="todo.h" />

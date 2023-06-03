@@ -129,23 +129,29 @@
   <ItemGroup>
     <ClCompile Include="battleship.cpp" />
     <ClCompile Include="calculator.cpp" />
+    <ClCompile Include="cardealership.cpp" />
     <ClCompile Include="fifteen.cpp" />
+    <ClCompile Include="filesystem.cpp" />
     <ClCompile Include="lyrics.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="management.cpp" />
     <ClCompile Include="memory.cpp" />
     <ClCompile Include="menuApps.cpp" />
     <ClCompile Include="todo.cpp" />
+    <ClCompile Include="warehouse%3b.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="battleship.h" />
     <ClInclude Include="calculator.h" />
+    <ClInclude Include="cardealership.h" />
     <ClInclude Include="fifteen.h" />
+    <ClInclude Include="filesystem.h" />
     <ClInclude Include="lyrics.h" />
     <ClInclude Include="management.h" />
     <ClInclude Include="memory.h" />
     <ClInclude Include="menuApps.h" />
     <ClInclude Include="todo.h" />
+    <ClInclude Include="warehouse.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
